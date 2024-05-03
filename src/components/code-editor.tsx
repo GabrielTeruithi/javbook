@@ -10,6 +10,7 @@ interface CodeEditorProps {
 }
 
 const CodeEditor: React.FC<CodeEditorProps> = ({initialValue, onChange}) => {
+  // eslint-disable-next-line  @typescript-eslint/no-explicit-any
   const editorRef = useRef<any>();
   const onEditorDidMount: EditorDidMount = (getValue, monacoEditor) => {
     editorRef.current = monacoEditor;
