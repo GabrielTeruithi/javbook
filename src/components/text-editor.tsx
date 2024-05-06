@@ -1,11 +1,20 @@
 import MDEditor from "@uiw/react-md-editor";
-import {useEffect, useState} from "react";
+import {useEffect, useRef, useState} from "react";
+import './text-editor.css';
 
 const TextEditor: React.FC = () => {
+  const ref = useRef<HTMLDivElement | null>(null);
   const [edditing, setEdditing] = useState(false);
+  const [value, setValue] = useState("# Header");
 
   useEffect(() => {
-    const listener = () => {
+    const listener = (event: MouseEvent) => {
+      if (ref.current && event.target && ref.current?.contains(event.target as Node)) {
+        console.log("element clicked on is inside editor");
+      } else {
+        console.log("element clicked is not inside editor");
+      }
+
       setEdditing(false);
     };
     document.addEventListener("click", listener, {capture: true});
@@ -17,15 +26,17 @@ const TextEditor: React.FC = () => {
 
   if (edditing) {
     return (
-      <div>
-        <MDEditor />
+      <div ref={ref} className="text-editor">
+        <div className="card-content">
+          <MDEditor value={value} onChange={(v) => setValue(v || "")}/>
+        </div>
       </div>
     );
   }
 
   return (
-    <div onClick={() => setEdditing(true)}>
-      <MDEditor.Markdown source={"# Header"} />
+    <div onClick={() => setEdditing(true)} className="text-editor">
+      <MDEditor.Markdown source={value} />
     </div>
   );
 };
