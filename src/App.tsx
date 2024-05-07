@@ -1,15 +1,15 @@
+import "@fortawesome/fontawesome-free/css/all.min.css"
 import {Provider} from "react-redux";
 import 'bulmaswatch/darkly/bulmaswatch.min.css'
-import CodeCell from "./components/code-cell";
-import TextEditor from "./components/text-editor";
 import {store} from "./state";
+import CellList from "./components/cell-list";
 
 const App = () => {
   return (
     <Provider store={store}>
-      <>
-        <TextEditor/>
-      </>
+      <div>
+        <CellList />
+      </div>
     </Provider>
   );
 };
