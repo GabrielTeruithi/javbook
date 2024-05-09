@@ -1,0 +1,32 @@
+{
+  "name": "local-api",
+  "version": "1.0.0",
+  "description": "> TODO: description",
+  "main": "dist/index.js",
+  "types": "dist/index.d.ts",
+  "scripts": {
+    "start": "tsc --watch --preserveWatchOutput",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [],
+  "author": "gTeruithi <gabrielt.oguma@gmail.com>",
+  "license": "ISC",
+  "directories": {
+    "lib": "lib",
+    "test": "__tests__"
+  },
+  "files": [
+    "lib"
+  ],
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/GabrielTeruithi/javbook.git"
+  },
+  "bugs": {
+    "url": "https://github.com/GabrielTeruithi/javbook/issues"
+  },
+  "homepage": "https://github.com/GabrielTeruithi/javbook#readme",
+  "dependencies": {
+    "typescript": "^5.4.5"
+  }
+}
