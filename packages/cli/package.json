@@ -24,6 +24,7 @@
   },
   "homepage": "https://github.com/GabrielTeruithi/javbook#readme",
   "dependencies": {
+    "@types/node": "^20.12.11",
     "commander": "^12.0.0",
     "typescript": "^5.4.5"
   }
