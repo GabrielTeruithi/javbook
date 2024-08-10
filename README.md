@@ -30,3 +30,5 @@ As its purpose was only for learning, this project will not have new features im
     - Clone the repo in your machine
     - Run the command "npm i --legacy-peer-deps"
     - Run the command "npm run dev"
+
+    ### Probably some docker version will be available 
